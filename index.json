@@ -9,6 +9,9 @@
       "author": "AnyAssistant",
       "version": "1.0.0",
       "description": "A flat sphere that breathes, beats with your voice and sends out waves when it speaks.",
+      "descriptions": {
+        "es": "Una esfera plana que respira, late con tu voz y emite ondas cuando habla."
+      },
       "screenshot": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/preview.png",
       "files": [
         {
@@ -46,6 +49,9 @@
       "author": "AnyAssistant",
       "version": "1.0.0",
       "description": "High contrast and large text: a light that changes with each state, and words.",
+      "descriptions": {
+        "es": "Alto contraste y texto grande: una luz que cambia con cada estado, y palabras."
+      },
       "screenshot": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/preview.png",
       "files": [
         {
@@ -88,6 +94,9 @@
       "author": "AnyAssistant",
       "version": "1.0.0",
       "description": "For the bedside table: only a dim time while asleep, and soft sounds.",
+      "descriptions": {
+        "es": "Para la mesilla: solo la hora, tenue, mientras duerme, y sonidos suaves."
+      },
       "screenshot": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/preview.png",
       "files": [
         {
