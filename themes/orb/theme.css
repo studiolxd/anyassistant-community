@@ -1,0 +1,105 @@
+/* Layout: everything centered in a column; the clock only while asleep.
+   Chrome 81 on the tablet: no `inset`, no flex `gap`, no :has(). */
+
+.layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  --green: var(--accent);
+  --green-dim: #1d4f3c;
+  --amber: #e0b54a;
+  --blue: #5bc6e8;
+  --violet: #a98cf0;
+  --red: #e05555;
+  --tone: var(--green);  /* one flat colour per state: the sphere, its ring, its waves, its answer */
+}
+body[data-look="asleep"] .layout { --tone: #888; }
+body[data-look="hearing"] .layout { --tone: #7ff0c2; }
+body[data-look="thinking"] .layout { --tone: var(--amber); }
+body[data-look="looking"] .layout { --tone: #cfd8dc; }
+body[data-look="speaking"] .layout { --tone: var(--blue); }
+body[data-look="question"] .layout { --tone: var(--violet); }
+body[data-look="alarm"] .layout { --tone: #ff7a45; }
+body[data-look="error"] .layout { --tone: var(--red); }
+
+.clock { display: none; text-align: center; color: #666; }
+.clock [data-part="time"] { margin: 0; font-size: 24vmin; font-weight: 200; line-height: 1; }
+.clock [data-part="date"] { margin: 1vmin 0 4vmin; font-size: 5vmin; }
+body[data-look="asleep"] .clock { display: block; }
+
+.status { font-size: 1.4em; margin: 1.2em 0 0; color: #888; }
+.stats { font-size: 0.9em; color: #555; font-family: monospace; }
+.timers { margin-top: 3vmin; text-align: center; color: #bbb; font-size: 5vmin; }
+.timers p { margin: 0.2em 0; }
+
+/* The words keep at least 7em and at most the space down to the bottom (the column's height:
+   they shrink, the face above doesn't move); longer, they scroll. */
+.captions { width: 90%; min-height: 7em; max-height: none; flex: 0 1 auto; margin: 0.6em 0 2vmin; text-align: center; }
+.captions p { margin: 0.3em 0; font-size: 1.1em; color: #666; }
+.captions p:last-child { font-size: 1.5em; color: #fff; }
+.captions p.assistant { color: var(--tone); opacity: 0.6; }
+.captions p.assistant:last-child { opacity: 1; }
+body[data-look="asleep"] .captions,
+body[data-look="asleep"] .stats { display: none; }
+
+/* The camera and the photo it looks at: over the face. */
+.window {
+  position: absolute;
+  top: 8%; left: 0; right: 0;
+  margin: 0 auto;
+  width: min(80vmin, 60vh);  /* at most 45 % of the height: in a wide window, above the captions */
+  height: min(60vmin, 45vh);
+  border-radius: 10px;
+}
+
+.face { position: relative; display: flex; flex-direction: column; align-items: center; }
+
+@keyframes breathe { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.8; } }
+@keyframes dot { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes wave { from { transform: scale(0.9); opacity: 0.7; } to { transform: scale(1.7); opacity: 0; } }
+@keyframes ring { 50% { transform: scale(0.85); opacity: 0.6; } }
+
+/* Your voice makes it grow while it listens (--voice, 0–1, from Jarvis). */
+.pulse { transition: transform 0.1s; }
+body[data-look="hearing"] .pulse,
+body[data-look="awake"] .pulse { transform: scale(calc(1 + var(--voice, 0) * 0.18)); }
+
+/* ===================== The orb ===================== */
+
+.orb { position: relative; width: 40vmin; height: 40vmin; margin: 3vmin; }
+
+.core, .wave, .ring { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: 50%; }
+.core { background: var(--tone); transition: opacity 0.4s, background 0.4s; }
+.wave { border: 0.6vmin solid var(--tone); opacity: 0; }
+.ring {
+  display: none;
+  top: -3vmin; right: -3vmin; bottom: -3vmin; left: -3vmin;
+  border: 0.8vmin solid transparent;
+  border-top-color: var(--tone);
+  border-right-color: var(--tone);
+  animation: spin 1.1s linear infinite;
+}
+
+/* Speaking: it beats with its own voice (--speech, 0–1). */
+body[data-look="speaking"] .pulse { transform: scale(calc(1 + var(--speech, 0) * 0.2)); }
+body[data-look="asleep"] .orb { transform: scale(0.55); }
+body[data-look="asleep"] .core { animation: breathe 5s ease-in-out infinite; }
+body[data-look="thinking"] .ring,
+body[data-look="looking"] .ring { display: block; }
+body[data-look="alarm"] .core { animation: ring 0.6s ease-in-out infinite; }
+body[data-look="speaking"] .wave { animation: wave 1.6s ease-out infinite; }
+body[data-look="speaking"] .wave.second { animation-delay: 0.8s; }
+
+/* Landscape (a tablet lying down, a screen): the same centred column, with less height
+   to spend: a smaller orb, the timers closer together (each on its own line), no room
+   kept under the words. */
+@media (orientation: landscape) {
+  .orb { width: 28vmin; height: 28vmin; margin: 2vmin; }
+  .timers { margin-top: 1.5vmin; font-size: 4.5vmin; }
+  .timers p { margin: 0; }
+  .captions { min-height: 0; width: 70%; margin-top: 0.3em; }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Minimal",
+  "author": "AnyAssistant",
+  "version": "1.0.0",
+  "description": "High contrast and large text: a light that changes with each state, and words.",
+  "options": {
+    "text": "#ffffff",
+    "background": "#000000"
+  }
+}

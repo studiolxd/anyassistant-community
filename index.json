@@ -1,5 +1,137 @@
 {
   "format": 1,
   "updated": "2026-11-02",
-  "packages": []
+  "packages": [
+    {
+      "kind": "theme",
+      "id": "orb",
+      "name": "Orb",
+      "author": "AnyAssistant",
+      "version": "1.0.0",
+      "description": "A flat sphere that breathes, beats with your voice and sends out waves when it speaks.",
+      "screenshot": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/preview.png",
+      "files": [
+        {
+          "path": "locales/es.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/locales/es.json",
+          "sha256": "3f01e066c1f713d111549a1c2a05738308b65a05b9a0f5742fcbf8ec7ce8c2b0"
+        },
+        {
+          "path": "preview.png",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/preview.png",
+          "sha256": "b5a843289e57ed4bb2864d460ad84c0a8807b76ea96765942f1cf2016ac9c99f"
+        },
+        {
+          "path": "theme.css",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/theme.css",
+          "sha256": "33e6c15ed0fc4ff3150e2b9b39a15421528b497babaf451b7e192a9b0a747210"
+        },
+        {
+          "path": "theme.html",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/theme.html",
+          "sha256": "d601a84553bf87323c72b90acc1328b196e6970d4a5a7def3193733b5b8bdfc7"
+        },
+        {
+          "path": "theme.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/orb/theme.json",
+          "sha256": "0919621e3351cd9eee52e1ddb4d82ba731387420fd69ed8edc687c66bc762232"
+        }
+      ],
+      "homepage": "https://github.com/studiolxd/anyassistant-community/tree/main/themes/orb"
+    },
+    {
+      "kind": "theme",
+      "id": "minimal",
+      "name": "Minimal",
+      "author": "AnyAssistant",
+      "version": "1.0.0",
+      "description": "High contrast and large text: a light that changes with each state, and words.",
+      "screenshot": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/preview.png",
+      "files": [
+        {
+          "path": "locales/en.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/locales/en.json",
+          "sha256": "3550268c482438ac826415c25373bd78dab06347307f34b97cdb7c4f1b40d580"
+        },
+        {
+          "path": "locales/es.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/locales/es.json",
+          "sha256": "d4d35e63362b31a4159eb0a3d60312d3c1ac8fbe23653dee9c27015e6ac71b24"
+        },
+        {
+          "path": "preview.png",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/preview.png",
+          "sha256": "ee2faf4b1e73ed00d4e91b23e876965d12ea5db1a99dfb1deb4b6cca6ccacea9"
+        },
+        {
+          "path": "theme.css",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/theme.css",
+          "sha256": "ee1638a3f8653b1a072fe750fd3b7a0102c320890a2a47afae29c41ba0cbbb6e"
+        },
+        {
+          "path": "theme.html",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/theme.html",
+          "sha256": "b1fc280f3bdc2949dd28f740c97d8ade222189db1dee3bca4b8285a4dc045122"
+        },
+        {
+          "path": "theme.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/minimal/theme.json",
+          "sha256": "9e3aa8bf25e475dbdd5c5ca64a46ddd3555e3173123de13925fd9217c4083404"
+        }
+      ],
+      "homepage": "https://github.com/studiolxd/anyassistant-community/tree/main/themes/minimal"
+    },
+    {
+      "kind": "theme",
+      "id": "bedside",
+      "name": "Bedside",
+      "author": "AnyAssistant",
+      "version": "1.0.0",
+      "description": "For the bedside table: only a dim time while asleep, and soft sounds.",
+      "screenshot": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/preview.png",
+      "files": [
+        {
+          "path": "locales/es.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/locales/es.json",
+          "sha256": "2c98d90394099c04b47bd0df00891627b7c5ae17bd20de5a2fb853c1f3677f39"
+        },
+        {
+          "path": "preview.png",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/preview.png",
+          "sha256": "197a3342ec24ca3d00896473063c9f819a8bf2871559adbc0dbe2649c739f439"
+        },
+        {
+          "path": "sounds/alarm.wav",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/sounds/alarm.wav",
+          "sha256": "c3e5470955cdaf8ca60476f21f62532e7b5852d8a63a67f5fb4479e78ea56a40"
+        },
+        {
+          "path": "sounds/sleep.wav",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/sounds/sleep.wav",
+          "sha256": "7eff35478ad72f9979e8f9bffd990c2984251eb0fb6beae98832a064fab5b91c"
+        },
+        {
+          "path": "sounds/wake.wav",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/sounds/wake.wav",
+          "sha256": "451986d3e4d63c8858f86444d1c0c5e53f1edb3e49537d3797494d36e4e0257a"
+        },
+        {
+          "path": "theme.css",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/theme.css",
+          "sha256": "5bba7f050bf7d89a8efc6b263c39dd4c6b149dc7fc291eceef653265e7b7448c"
+        },
+        {
+          "path": "theme.html",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/theme.html",
+          "sha256": "b6fcb582f259086ffe64ca366ada5b51b12da2fb39d2cbb091e64f1b3236b898"
+        },
+        {
+          "path": "theme.json",
+          "url": "https://raw.githubusercontent.com/studiolxd/anyassistant-community/main/themes/bedside/theme.json",
+          "sha256": "eb4b5f2f894501e356cc610d9b6cc72ee58359e265c5826a15724441f5421a10"
+        }
+      ],
+      "homepage": "https://github.com/studiolxd/anyassistant-community/tree/main/themes/bedside"
+    }
+  ]
 }
